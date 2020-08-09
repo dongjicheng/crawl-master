@@ -1,0 +1,54 @@
+2020-07-28 13:45:57,604 - spider.py - MainProcess - [line:94] - INFO: output_db_collection: jicheng,shoujiguishudi
+2020-08-08 23:32:39,977 - spider.py - MainProcess - [line:107] - INFO: output_db_collection: jicheng,shoujiguishudi
+2020-08-08 23:32:58,362 - spider.py - MainProcess - [line:107] - INFO: output_db_collection: jicheng,shoujiguishudi
+2020-08-08 23:33:14,221 - utils.py - MainProcess - [line:184] - WARNING: Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "D:\Python\Python36\lib\urllib\request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "D:\Python\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Python\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Python\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Python\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\Python\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\Python\Python36\lib\http\client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "D:\Python\Python36\lib\socket.py", line 724, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\virten\crawl\lib\site-packages\fake_useragent\utils.py", line 67, in get
+    context=context,
+  File "D:\Python\Python36\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Python\Python36\lib\urllib\request.py", line 526, in open
+    response = self._open(req, data)
+  File "D:\Python\Python36\lib\urllib\request.py", line 544, in _open
+    '_open', req)
+  File "D:\Python\Python36\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "D:\Python\Python36\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "D:\Python\Python36\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error timed out>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\virten\crawl\lib\site-packages\fake_useragent\utils.py", line 166, in load
+    verify_ssl=verify_ssl,
+  File "F:\virten\crawl\lib\site-packages\fake_useragent\utils.py", line 122, in get_browser_versions
+    verify_ssl=verify_ssl,
+  File "F:\virten\crawl\lib\site-packages\fake_useragent\utils.py", line 84, in get
+    raise FakeUserAgentError('Maximum amount of retries reached')
+fake_useragent.errors.FakeUserAgentError: Maximum amount of retries reached
